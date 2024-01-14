@@ -41,10 +41,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     width: SIZES.width - 44,
     top: 20,
+    gap: 10
   },
   title: {
     fontFamily: "bold",
     fontSize: SIZES.large,
+    maxWidth: '70%',
+    textAlign: "justify",
   },
   priceWrapper: {
     backgroundColor: COLORS.secondary,

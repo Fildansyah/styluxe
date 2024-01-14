@@ -1,12 +1,16 @@
-import { View, Text } from 'react-native'
+import { View, Text, Image } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from "react-native-safe-area-context";
 
 
 const Discussion = () => {
   return (
-    <SafeAreaView>
-      <Text>Discussion</Text>
+    <SafeAreaView style={{ flex: 1 , justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' }}>
+      <Text style={{fontFamily: "bold", fontSize: 40, color:'#233a64' }}>DISCUSION</Text>
+      <Image
+      source={{ uri: 'https://i0.wp.com/iaihnwlotim.ac.id/wp-content/uploads/2022/12/Maintenance-Page.jpg?fit=1920%2C1080&ssl=1'}}
+      style={{ width: '100%', height: '25%' }}
+      />
     </SafeAreaView>
   )
 }

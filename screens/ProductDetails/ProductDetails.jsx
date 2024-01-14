@@ -1,4 +1,11 @@
-import { Dimensions, Image, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Dimensions,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useState } from "react";
 import styles from "./ProductDetails.style";
@@ -13,11 +20,14 @@ import {
 import { COLORS, SIZES } from "../../constants";
 import { useNavigation } from "@react-navigation/native";
 import Carousel from "react-native-reanimated-carousel";
+import { selectedProductState } from "../../hook/product.slice";
+import { useSelector } from "react-redux";
 
 const ProductDetails = () => {
   const navigation = useNavigation();
   const [count, setCount] = useState(1);
   const countDisabled = count === 1;
+  const selectedProduct = useSelector(selectedProductState);
 
   const increment = () => {
     setCount(count + 1);
@@ -29,14 +39,10 @@ const ProductDetails = () => {
     }
   };
 
-  const slides = [
-    "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/596/2023/11/19/project_20231119_1559550-01-2610195424.jpg",
-    "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/596/2023/11/19/project_20231119_1559550-01-2610195424.jpg",
-    "https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/596/2023/11/19/project_20231119_1559550-01-2610195424.jpg",
-  ];
+  const slides = [selectedProduct?.img];
 
-  const width = Dimensions.get('window').width;
-  const height = Dimensions.get('window').height;
+  const width = Dimensions.get("window").width;
+  const height = Dimensions.get("window").height;
 
   return (
     <SafeAreaView style={styles.container}>
@@ -55,42 +61,49 @@ const ProductDetails = () => {
           </View>
         </TouchableOpacity>
       </View>
-       <Carousel
-                loop
-                width={width}
-                height={height/2 }
-                data={slides}
-                scrollAnimationDuration={2000}
-                renderItem={({ index, item: src }) => (
-                    <View
-                        style={{
-                            flex: 1,
-                            borderRadius: 10,
-                        }}
-                    >
-                        <Image 
-                        source={{ uri: src }}
-                        style={{
-                            width: '100%',
-                            height: '100%',
-                        }}
-                        />
-                    </View>
-                )}
+      <Carousel
+        loop
+        width={width}
+        height={height / 2}
+        data={slides}
+        scrollAnimationDuration={2000}
+        renderItem={({ index, item: src }) => (
+          <View
+            style={{
+              flex: 1,
+              borderRadius: 10,
+            }}
+          >
+            <Image
+              source={{ uri: src }}
+              style={{
+                width: "100%",
+                height: "100%",
+              }}
             />
+          </View>
+        )}
+      />
       <View style={styles.details}>
         <View style={styles.titleRow}>
-          <Text style={styles.title}>Product</Text>
+          <Text style={styles.title}>{selectedProduct?.title}</Text>
           <View style={styles.priceWrapper}>
-            <Text style={styles.price}>Rp. 50.000</Text>
+            <Text style={styles.price}>{`Rp. ${selectedProduct?.price.toLocaleString()}`}</Text>
           </View>
         </View>
         <View style={styles.ratingRow}>
           <View style={styles.rating}>
             {[1, 2, 3, 4, 5].map((idx) => (
-              <Ionicons key={idx} name="star" size={24} color={"gold"} />
+              <Ionicons
+                key={idx}
+                name={
+                  idx <= selectedProduct?.total_rating ? "star" : "star-outline"
+                }
+                size={24}
+                color={"gold"}
+              />
             ))}
-            <Text>(5)</Text>
+            <Text>({selectedProduct?.total_rating})</Text>
           </View>
 
           <View style={styles.counter}>
@@ -120,10 +133,7 @@ const ProductDetails = () => {
         <View style={styles.descriptionWrapper}>
           <Text style={styles.description}>Description</Text>
           <Text style={styles.descText}>
-            TERSEDIA SIZE S M L XL XXL Warna : Hitam merah kuning orange putih
-            marun navy biru bahan Cotton Combed 30s Tersedia SIZE S,M,L,XL,2XL
-            (Panjang x Lebar) S = 58 x 38 cm M = 63 x 41 cm L = 69 x 50 cm XL =
-            71 x 53 cm Silahkan req warna dan size di catatan atau chat :D
+            {selectedProduct?.description}
           </Text>
         </View>
 
@@ -146,15 +156,14 @@ const ProductDetails = () => {
         </View>
 
         <View style={styles.cartRow}>
-              <TouchableOpacity onPress={()=>{}} style={styles.cartBtn}>
-                <Text style={styles.cartTitle}>Buy Now</Text>
-              </TouchableOpacity>
+          <TouchableOpacity onPress={() => {}} style={styles.cartBtn}>
+            <Text style={styles.cartTitle}>Buy Now</Text>
+          </TouchableOpacity>
 
-              <TouchableOpacity onPress={()=>{}} style={styles.addCart}>
-                <Fontisto name="shopping-bag" color={COLORS.lightWhite} size={22}/>
-              </TouchableOpacity>
+          <TouchableOpacity onPress={() => {}} style={styles.addCart}>
+            <Fontisto name="shopping-bag" color={COLORS.lightWhite} size={22} />
+          </TouchableOpacity>
         </View>
-
       </View>
     </SafeAreaView>
   );

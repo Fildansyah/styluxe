@@ -1,10 +1,8 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Discussion, Home, Profile, Search } from "../screens";
+import { Discussion, Home, Profile } from "../screens";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../constants/index";
-import { View } from "react-native";
-
 
 const Tab = createBottomTabNavigator();
 
