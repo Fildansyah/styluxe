@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { View, Text, Animated } from 'react-native';
-import { COLORS } from '../../constants';
+import { COLORS } from './constants';
 
 const AnimatedText = Animated.createAnimatedComponent(Text);
 
@@ -31,7 +31,7 @@ const AnimatedTitle = () => {
     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
       <AnimatedText
         style={[
-          styles.title('bold', 20, 0, COLORS.lightWhite),
+          styles.title('bold', 20, 0, COLORS.black),
           { transform: [{ translateX }] },
         ]}
       >

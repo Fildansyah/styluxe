@@ -6,7 +6,8 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.white,
     width: "100%",
     padding: 10,
-    borderRadius: 10,
+    borderTopRightRadius: 10,
+    borderTopLeftRadius: 10,
   },
   header: {
     alignItems: "center",
@@ -46,7 +47,7 @@ const styles = StyleSheet.create({
     textAlign: "center",
     color: COLORS.white,
     fontFamily: "medium",
-  }
+  },
 });
 
 export default styles;

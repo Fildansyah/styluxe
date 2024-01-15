@@ -1,42 +1,60 @@
-export const featuredData = [
+export const featuredMenu = [
   {
     id: 1,
-    title: "Men Blue Slim Fit Textured Full Sleeves Formal Shirts",
-    category: "Shirts",
-    price: 50000,
-    img: "https://imagescdn.planetfashion.in/img/app/product/7/789977-9243368.jpg?auto=format&w=494.40000000000003",
-    description:
-      "Update your look with this Blue Textured Slim Fit shirt from Allen Solly by Allen Solly and enjoy the attention.",
-    total_rating: 5,
+    category: [
+      {
+        id: 1,
+        name: "Jackets",
+        img: "https://images.lululemon.com/is/image/lululemon/LW3EP2S_026083_1?size=800,800",
+        height: 162,
+      },
+      {
+        id: 2,
+        name: "Dress",
+        img: "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/22969002/2023/5/2/7f9fe1c2-6da1-47fe-b639-281261cc89431682994331602VTRADITIONPinkFitFlareMidiDress1.jpg",
+        height: 250,
+      },
+      {
+        id: 3,
+        name: "Pants",
+        img: "https://www.picture-organic-clothing.com/dw/image/v2/BGFP_PRD/on/demandware.static/-/Sites-poc-master-catalog/default/dw14527324/images/model/MPT127_B_03.jpg?sw=1200&sh=1200&sm=fit",
+        height: 276,
+      },
+      {
+        id: 4,
+        name: "Shirts",
+        img: "https://ramrajcotton.in/cdn/shop/files/Shirt1.jpg?v=1697609752",
+        height: 135,
+      },
+    ],
   },
   {
     id: 2,
-    title: "Chinos Slim Fit Cream",
-    category: "Pants",
-    price: 300000,
-    img: "https://dynamic.zacdn.com/6FIbPE_1Hn9WtI6TiV7eQoHw5jE=/filters:quality(70):format(webp)/https://static-id.zacdn.com/p/manly-0592-0082442-3.jpg",
-    description:
-      "Upgrade your wardrobe with these stylish Chinos Slim Fit Cream pants. Made with high-quality fabric, these pants offer both comfort and style. Perfect for casual and semi-formal occasions.",
-    total_rating: 4,
-  },
-  {
-    id: 3,
-    title: "Essential Hoodie Navy",
-    category: "Jackets",
-    price: 400000,
-    img: "https://contents.mediadecathlon.com/p2372982/k$475393b5a03102723c668517d30284b4/majority-cotton-hoodie-essentials-collection-navy-blue.jpg?format=auto&quality=70&f=768x768",
-    description:
-      "Stay warm and stylish with our Essential Hoodie in Navy. Made from a comfortable and durable fabric, this hoodie is perfect for your everyday adventures. The classic navy blue color makes it a versatile addition to your wardrobe.",
-    total_rating: 4,
-  },
-  {
-    id: 4,
-    title: "Cowl Neck Slip Dress",
-    category: "Dress",
-    price: 50000,
-    img: "https://dynamic.zacdn.com/hrliY0aovCz7uwToufrCCovCem4=/filters:quality(70):format(webp)/https://static-id.zacdn.com/p/trendyol-9488-3952224-1.jpg",
-    description:
-      "Make a statement with our Cowl Neck Slip Dress. This elegant dress features a flattering cowl neck design and is perfect for both casual and formal occasions. The comfortable fit and stylish look make it a must-have in your dress collection.",
-    total_rating: 5,
+    category: [
+      {
+        id: 1,
+        name: "T-Shirts",
+        img: "https://overlays.co/cdn/shop/files/20230804-DSC03331.jpg?v=1692105093&width=3168",
+        height: 162,
+      },
+      {
+        id: 2,
+        name: 'Shoes',
+        img: "https://www.melbournepodiatryclinic.net.au/wp-content/uploads/2023/01/asics-choose-running-shoes-lp-article-06032022-2.jpg",
+        height: 250,
+      },
+      {
+        id: 3,
+        name: "Hats",
+        img: "https://media.glamourmagazine.co.uk/photos/62a06c0af321fea9799cfd4b/4:3/w_772,h_579,c_limit/SUN%20HATS%20080622%20SQUARE.jpg",
+        height: 276,
+      },
+      {
+        id: 4,
+        name: "Socks",
+        img: "https://www.verywellhealth.com/thmb/asJh31ztwuRkbkYQT6M8HysRQtA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-606357239-671dc949563340358ad40f050422f4ea.jpg",
+        height: 135,
+      }
+    ],
   },
 ];

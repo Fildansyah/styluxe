@@ -3,17 +3,20 @@ import React from "react";
 import styles from "./ProductRow.style";
 import { SIZES } from "../../../constants";
 import { ProductCardView } from "../ProductCardView";
-import { featuredData } from "../../../mocks/home";
+import { featuredData } from "../../../mocks/product";
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedProduct } from "../../../hook/product.slice";
 
 const ProductRow = () => {
 
   const dispatch = useDispatch();
+
+  const filteredData = featuredData.filter((item) => item.isFeatured );
+
   return (
     <View style={styles.container}>
       <FlatList
-        data={featuredData}
+        data={filteredData}
         renderItem={({ item }) => (
           <ProductCardView
             key={item.id}
@@ -21,6 +24,7 @@ const ProductRow = () => {
             category={item.category}
             price={item.price}
             title={item.title}
+            rating={item.total_rating}
             onPressCard={() => dispatch(setSelectedProduct(item))}
           />
         )}

@@ -5,7 +5,15 @@ import { COLORS } from "../../../constants";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
 
-const ProductCardView = ({ image_uri, title, category, price, onPressAdd, onPressCard }) => {
+const ProductCardView = ({
+  image_uri,
+  title,
+  category,
+  price,
+  onPressAdd,
+  onPressCard,
+  rating,
+}) => {
   const navigation = useNavigation();
 
   return (
@@ -30,6 +38,14 @@ const ProductCardView = ({ image_uri, title, category, price, onPressAdd, onPres
           </Text>
           <View style={styles.addBtn}>
             <View>
+              <View>
+                <View style={{ flexDirection: "row" }}>
+                  <Ionicons name="star" size={15} color={"gold"} />
+                  <Text
+                    style={{ fontFamily: "regular", fontSize: 12 }}
+                  >{`(${rating})`}</Text>
+                </View>
+              </View>
               <Text style={styles.category} numberOfLines={1}>
                 {category}
               </Text>

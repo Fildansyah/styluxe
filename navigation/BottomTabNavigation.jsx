@@ -1,13 +1,12 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Discussion, Home, Profile } from "../screens";
+import { Discussion, Home, Profile, Stylist } from "../screens";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../constants/index";
 
 const Tab = createBottomTabNavigator();
 
 const screenOptions = {
-  tabBarShowLabel: false,
   tabBarHideOnKeyboard: true,
   headerShown: false,
   tabBarStyle: {
@@ -52,7 +51,21 @@ const BottomTabNavigation = () => {
           },
         }}
       />
-
+      <Tab.Screen
+        name="Stylist"
+        component={Stylist}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Ionicons
+                name={focused ? "shirt" : "shirt-outline"}
+                size={20}
+                color={focused ? COLORS.primary : COLORS.gray2}
+              />
+            );
+          },
+        }}
+      />
       <Tab.Screen
         name="Profile"
         component={Profile}

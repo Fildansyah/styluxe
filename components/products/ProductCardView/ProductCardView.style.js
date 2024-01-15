@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
     height: 240,
     marginEnd: 22,
     borderRadius: SIZES.medium,
-    backgroundColor: COLORS.secondary,
+    backgroundColor: COLORS.offwhite,
   },
   imageContainer: {
     width: 170,
@@ -26,8 +26,9 @@ const styles = StyleSheet.create({
   },
   title: {
     fontFamily: "bold",
-    fontSize: SIZES.large,
+    fontSize: SIZES.small + 4,
     marginBottom: 2,
+    maxWidth: 130,
   },
   category: {
     fontFamily: "regular",

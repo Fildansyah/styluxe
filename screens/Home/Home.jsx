@@ -18,6 +18,8 @@ import {
   Welcome,
 } from "../../components";
 import { COLORS } from "../../constants";
+import AnimatedTitle from "../../AnimatedText";
+import { featuredMenu } from "../../mocks/home";
 
 const Home = () => {
   const slides = [
@@ -28,7 +30,7 @@ const Home = () => {
   const width = Dimensions.get("window").width;
   const height = Dimensions.get("window").height;
   return (
-    <SafeAreaView style={{ marginBottom: "25%" }}>
+    <SafeAreaView style={{ marginBottom: "25%", backgroundColor: COLORS.lightGray }}>
       <View style={styles.appBarWrapper}>
         <View style={styles.appBar}>
           <View style={{ flexDirection: "row", gap: 5 }}>
@@ -81,10 +83,10 @@ const Home = () => {
         <Headings title={"Collection"} />
 
         <Carousels
-          slides={["1", "2"]}
+          slides={featuredMenu}
           loop={false}
           calc={1.5}
-          renderItem={({ index, item }) => <Collection />}
+          renderItem={({ index, item }) => <Collection category={item.category} />}
         />
        <View style={{height:40}}>
       </View>

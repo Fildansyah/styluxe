@@ -4,7 +4,7 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
-import { Cart, ProductDetails, Search } from "./screens";
+import { Cart, Category, ProductDetails, Search } from "./screens";
 import { Provider } from "react-redux";
 import store from "./hook/store";
 
@@ -34,6 +34,7 @@ export default function App() {
     <Provider store={store}>
       <NavigationContainer>
         <Stack.Navigator>
+          {/* home */}
           <Stack.Screen
             name="Bottom Navigation"
             component={BottomTabNavigation}
@@ -54,6 +55,15 @@ export default function App() {
             component={Search}
             options={{ headerShown: false }}
           />
+          <Stack.Screen
+            name="Category"
+            component={Category}
+            options={{ headerShown: false }}
+          />
+          {/* home */}
+
+          
+
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

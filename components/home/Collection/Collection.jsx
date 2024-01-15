@@ -1,52 +1,90 @@
 import { View, Text, Image, TouchableOpacity } from "react-native";
 import React from "react";
 import styles from "./Collection.style";
+import { useNavigation } from "@react-navigation/native";
+import { useDispatch } from "react-redux";
+import { setSelectedCategory } from "../../../hook/product.slice";
 
-const Collection = () => {
+const Collection = ({ category }) => {
+  const dispatch = useDispatch();
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
-      <View style={{ flexDirection: "row", gap: 16,  justifyContent: 'center' }}>
+      <View style={{ flexDirection: "row", gap: 16, justifyContent: "center" }}>
         <View style={{ flexDirection: "column", gap: 24 }}>
-          <TouchableOpacity style={{ flexDirection: "column" }}>
+          <TouchableOpacity
+            style={{ flexDirection: "column" }}
+            onPress={() => {
+              navigation.navigate("Category");
+              dispatch(setSelectedCategory(category[0].name));
+            }}
+          >
             <Image
               source={{
-                uri: "https://images.lululemon.com/is/image/lululemon/LW3EP2S_026083_1?size=800,800",
+                uri: category[0]?.img,
               }}
               style={{ width: 152, height: 162 }}
             />
-            <Text style={{padding: 16, fontFamily: 'semibold'}}>Jacket</Text>
+            <Text style={{ padding: 16, fontFamily: "semibold" }}>
+              {category[0]?.name}
+            </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={{ flexDirection: "column" }}>
+          <TouchableOpacity
+            style={{ flexDirection: "column" }}
+            onPress={() => {
+              navigation.navigate("Category");
+              dispatch(setSelectedCategory(category[1].name));
+            }}
+          >
             <Image
               source={{
-                uri: "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/22969002/2023/5/2/7f9fe1c2-6da1-47fe-b639-281261cc89431682994331602VTRADITIONPinkFitFlareMidiDress1.jpg",
+                uri: category[1]?.img,
               }}
               style={{ width: 152, height: 250 }}
             />
-            <Text style={{padding: 16, fontFamily: 'semibold'}}>Dresses</Text>
+            <Text style={{ padding: 16, fontFamily: "semibold" }}>
+              {category[1]?.name}
+            </Text>
           </TouchableOpacity>
         </View>
 
         <View style={{ flexDirection: "column", gap: 24 }}>
-          <TouchableOpacity style={{ flexDirection: "column" }}>
+          <TouchableOpacity
+            style={{ flexDirection: "column" }}
+            onPress={() => {
+              navigation.navigate("Category");
+              dispatch(setSelectedCategory(category[2].name));
+            }}
+          >
             <Image
               source={{
-                uri: "https://www.picture-organic-clothing.com/dw/image/v2/BGFP_PRD/on/demandware.static/-/Sites-poc-master-catalog/default/dw14527324/images/model/MPT127_B_03.jpg?sw=1200&sh=1200&sm=fit",
+                uri: category[2]?.img,
               }}
               style={{ width: 152, height: 276 }}
             />
-            <Text style={{padding: 16, fontFamily: 'semibold'}}>Pants</Text>
+            <Text style={{ padding: 16, fontFamily: "semibold" }}>
+              {category[2]?.name}
+            </Text>
           </TouchableOpacity>
 
-          <TouchableOpacity style={{ flexDirection: "column" }}>
+          <TouchableOpacity
+            style={{ flexDirection: "column" }}
+            onPress={() => {
+              navigation.navigate("Category");
+              dispatch(setSelectedCategory(category[3].name));
+            }}
+          >
             <Image
               source={{
-                uri: "https://ramrajcotton.in/cdn/shop/files/Shirt1.jpg?v=1697609752",
+                uri: category[3]?.img,
               }}
               style={{ width: 152, height: 135 }}
             />
-            <Text style={{padding: 16, fontFamily: 'semibold'}}>Shirts</Text>
+            <Text style={{ padding: 16, fontFamily: "semibold" }}>
+              {category[3]?.name}
+            </Text>
           </TouchableOpacity>
         </View>
       </View>

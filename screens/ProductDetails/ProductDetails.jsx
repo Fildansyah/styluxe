@@ -1,6 +1,7 @@
 import {
   Dimensions,
   Image,
+  ScrollView,
   StyleSheet,
   Text,
   TouchableOpacity,
@@ -9,7 +10,6 @@ import {
 import { SafeAreaView } from "react-native-safe-area-context";
 import React, { useState } from "react";
 import styles from "./ProductDetails.style";
-// import { SliderBox } from "react-native-image-slider-box";
 
 import {
   Fontisto,
@@ -28,6 +28,7 @@ const ProductDetails = () => {
   const [count, setCount] = useState(1);
   const countDisabled = count === 1;
   const selectedProduct = useSelector(selectedProductState);
+  const [selectedSize, setSelectedSize] = useState("XS");
 
   const increment = () => {
     setCount(count + 1);
@@ -41,8 +42,7 @@ const ProductDetails = () => {
 
   const slides = [selectedProduct?.img];
 
-  const width = Dimensions.get("window").width;
-  const height = Dimensions.get("window").height;
+  const sizes = ["XS", "S", "M", "L", "XL"];
 
   return (
     <SafeAreaView style={styles.container}>
@@ -61,10 +61,11 @@ const ProductDetails = () => {
           </View>
         </TouchableOpacity>
       </View>
+
       <Carousel
         loop
-        width={width}
-        height={height / 2}
+        width={SIZES.width}
+        height={SIZES.height / 2}
         data={slides}
         scrollAnimationDuration={2000}
         renderItem={({ index, item: src }) => (
@@ -88,7 +89,9 @@ const ProductDetails = () => {
         <View style={styles.titleRow}>
           <Text style={styles.title}>{selectedProduct?.title}</Text>
           <View style={styles.priceWrapper}>
-            <Text style={styles.price}>{`Rp. ${selectedProduct?.price.toLocaleString()}`}</Text>
+            <Text
+              style={styles.price}
+            >{`Rp. ${selectedProduct?.price.toLocaleString()}`}</Text>
           </View>
         </View>
         <View style={styles.ratingRow}>
@@ -130,40 +133,44 @@ const ProductDetails = () => {
           </View>
         </View>
 
-        <View style={styles.descriptionWrapper}>
-          <Text style={styles.description}>Description</Text>
-          <Text style={styles.descText}>
-            {selectedProduct?.description}
-          </Text>
-        </View>
-
-        <View style={{ marginBottom: SIZES.small }}>
-          <View style={styles.location}>
-            <View
-              style={{ flexDirection: "row", alignItems: "center", gap: 5 }}
-            >
-              <Ionicons name="location-outline" size={20} />
-              <Text>Jakarta</Text>
-            </View>
-
-            <View
-              style={{ flexDirection: "row", alignItems: "center", gap: 5 }}
-            >
-              <MaterialCommunityIcons name="truck-delivery-outline" size={20} />
-              <Text>Free Delivery</Text>
-            </View>
+        <View style={styles.sizeContainer}>
+          <Text style={styles.sizeTitle}>Select Size</Text>
+          <View style={styles.sizeSelection}>
+            {sizes.map((size) => (
+              <TouchableOpacity
+                style={
+                  selectedSize === size ? styles.size_selected : styles.size
+                }
+                onPress={() => setSelectedSize(size)}
+              >
+                <Text
+                  style={
+                    selectedSize === size
+                      ? styles.sizeText_selected
+                      : styles.sizeText
+                  }
+                >
+                  {size}
+                </Text>
+              </TouchableOpacity>
+            ))}
           </View>
         </View>
 
-        <View style={styles.cartRow}>
-          <TouchableOpacity onPress={() => {}} style={styles.cartBtn}>
-            <Text style={styles.cartTitle}>Buy Now</Text>
-          </TouchableOpacity>
+        <ScrollView style={styles.descriptionWrapper}>
+          <Text style={styles.description}>Description</Text>
+          <Text style={styles.descText}>{selectedProduct?.description}</Text>
+        </ScrollView>
+      </View>
 
-          <TouchableOpacity onPress={() => {}} style={styles.addCart}>
-            <Fontisto name="shopping-bag" color={COLORS.lightWhite} size={22} />
-          </TouchableOpacity>
-        </View>
+      <View style={styles.cartRow}>
+        <TouchableOpacity onPress={() => {}} style={styles.cartBtn}>
+          <Text style={styles.cartTitle}>Buy Now</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity onPress={() => {}} style={styles.addCart}>
+          <Fontisto name="shopping-bag" color={COLORS.lightWhite} size={22} />
+        </TouchableOpacity>
       </View>
     </SafeAreaView>
   );
