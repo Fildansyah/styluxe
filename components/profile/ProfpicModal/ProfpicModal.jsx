@@ -63,7 +63,7 @@ const ProfpicModal = ({ setSelectedImage, setModalProfile }) => {
           <Text style={styles.options}>Choose Existing Picture</Text>
         </TouchableOpacity>
 
-        <TouchableOpacity style={styles.optionsBtn}>
+        <TouchableOpacity style={styles.optionsBtn} onPress={()=>setSelectedImage(null)}>
           <Ionicons name="trash-outline" size={24} color={COLORS.red} />
           <Text style={styles.options}>Remove Picture</Text>
         </TouchableOpacity>

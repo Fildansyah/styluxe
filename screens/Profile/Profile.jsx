@@ -35,9 +35,9 @@ const Profile = () => {
       <View style={styles.profileContainer}>
         <View>
           <Image
-            source={{
+            source={selectedImage ? {
               uri: selectedImage,
-            }}
+            } : require("../../images/userDefault.png")}
             style={styles.profileImage}
           />
           <TouchableOpacity style={styles.editBtn} onPress={toggleModalProfile}>
