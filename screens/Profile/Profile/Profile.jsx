@@ -1,9 +1,8 @@
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
-
 import styles from "./Profile.styles";
-import { Login, UserProfile } from "../../components";
-import useAuth from "../../hook/auth";
+import { Login, UserProfile } from "../../../components";
+import useAuth from "../../../hook/auth"; 
 
 const Profile = () => {
   const token = useAuth();

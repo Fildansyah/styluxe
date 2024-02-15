@@ -1,7 +1,6 @@
-import { View, Text, Image, TouchableOpacity, Alert } from "react-native";
+import { View, Text, Image, Alert } from "react-native";
 import React, { useEffect, useState } from "react";
-import { Ionicons } from "@expo/vector-icons";
-import { COLORS } from "../../../constants";
+
 import styles from "./UserProfile.styles";
 import ReactNativeModal from "react-native-modal";
 import { LogoutModal, ProfileMenu, ProfpicModal } from "../../profile";
@@ -9,7 +8,7 @@ import axios from "axios";
 import useAuth from "../../../hook/auth";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
-import {API_URL} from "@env";
+import { API_URL } from "../../../utils/env";
 
 const UserProfile = () => {
   const [modalLogout, setModalLogout] = useState(false);
@@ -81,13 +80,6 @@ const UserProfile = () => {
             }
             style={styles.profileImage}
           />
-          <TouchableOpacity style={styles.editBtn} onPress={toggleModalProfile}>
-            <Ionicons
-              name="ios-pencil-outline"
-              size={24}
-              color={COLORS.offwhite}
-            />
-          </TouchableOpacity>
         </View>
         <Text style={styles.profileName}>
           {isLoading ? "loading.." : data?.first_name + " " + data?.last_name}
@@ -97,8 +89,10 @@ const UserProfile = () => {
       <View style={styles.listContainer}>
         <ProfileMenu
           iconName={"person-outline"}
-          label={"Your Profile"}
-          onPressIn={() => {}}
+          label={"My Profile"}
+          onPressIn={() => {
+            navigation.navigate("MyProfile");
+          }}
         />
         <ProfileMenu
           iconName={"home-outline"}

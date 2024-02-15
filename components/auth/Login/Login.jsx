@@ -12,7 +12,7 @@
   import AsyncStorage from "@react-native-async-storage/async-storage";
   import axios from "axios";
   import { useNavigation } from "@react-navigation/native";
-  import {API_URL} from "@env";
+  import { API_URL } from "../../../utils/env";
 
   const Login = () => {
     const [isHidden, setIsHidden] = useState(true);
@@ -25,6 +25,8 @@
     const navigation = useNavigation();
 
     const handleLogin = async () => {
+      console.log('api ur', API_URL)
+
       try {
         setIsLoading(true);
   
@@ -32,9 +34,12 @@
   
         const token = response.data.token;
         const responseCode = response.data.code;
+        const tokenExpires = response.data.expiresIn;
   
         if (responseCode === 200) {
           await AsyncStorage.setItem("token", token);
+          await AsyncStorage.setItem("tokenExpires", tokenExpires);
+
           Alert.alert("Success", "Login successful.", [
             {
               text: "OK",

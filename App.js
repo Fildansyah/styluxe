@@ -1,10 +1,11 @@
+import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
-import { Cart, Category, ProductDetails, Search } from "./screens";
+import { Cart, Category, MyProfile, ProductDetails, Search } from "./screens";
 import { Provider } from "react-redux";
 import store from "./hook/store";
 
@@ -62,7 +63,13 @@ export default function App() {
           />
           {/* home */}
 
-          
+          {/* profile */}
+            <Stack.Screen 
+            name="MyProfile"
+            component={MyProfile}
+            options={{ headerShown: false }}
+            />
+          {/* profile */}
 
         </Stack.Navigator>
       </NavigationContainer>
