@@ -4,6 +4,7 @@
     TextInput,
     TouchableOpacity,
     Alert,
+    Image,
   } from "react-native";
   import React, { useState } from "react";
   import { Ionicons } from "@expo/vector-icons";
@@ -64,6 +65,10 @@
 
     return (
       <View style={styles.container}>
+      <Image
+        source={require("../../../assets/logo_nob.png")}
+        style={{ width: 120, height: 120, marginBottom: 20 }}
+      />
         <Text style={styles.title}>Log in</Text>
 
         <View style={styles.input_container}>
