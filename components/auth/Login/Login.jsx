@@ -35,10 +35,10 @@
         const token = response.data.token;
         const responseCode = response.data.code;
         const tokenExpires = response.data.expiresIn;
-  
+        
         if (responseCode === 200) {
           await AsyncStorage.setItem("token", token);
-          await AsyncStorage.setItem("tokenExpires", tokenExpires);
+          await AsyncStorage.setItem("tokenExpires", tokenExpires.toString());
 
           Alert.alert("Success", "Login successful.", [
             {
