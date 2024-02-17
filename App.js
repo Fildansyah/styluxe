@@ -8,6 +8,7 @@ import BottomTabNavigation from "./navigation/BottomTabNavigation";
 import { Cart, Category, MyProfile, ProductDetails, Search } from "./screens";
 import { Provider } from "react-redux";
 import store from "./hook/store";
+import useAuth from "./hook/auth";
 
 const Stack = createNativeStackNavigator();
 
@@ -20,7 +21,7 @@ export default function App() {
     bold: require("./fonts/Poppins-Bold.ttf"),
     extrabold: require("./fonts/Poppins-ExtraBold.ttf"),
   });
-
+    
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
       await SplashScreen.hideAsync();

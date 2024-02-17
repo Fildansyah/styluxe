@@ -1,11 +1,11 @@
-import { View, Text, FlatList, ScrollView } from "react-native";
+import { View, FlatList } from "react-native";
 import React from "react";
 import styles from "./ProductRow.style";
 import { SIZES } from "../../../constants";
 import { ProductCardView } from "../ProductCardView";
 import { featuredData } from "../../../mocks/product";
-import { useDispatch, useSelector } from "react-redux";
-import { setSelectedProduct } from "../../../hook/product.slice";
+import { useDispatch } from "react-redux";
+import { setSelectedProduct } from "../../../hook/slice/product.slice";
 
 const ProductRow = () => {
 

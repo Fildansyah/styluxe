@@ -3,7 +3,7 @@ import React from "react";
 import styles from "./Collection.style";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch } from "react-redux";
-import { setSelectedCategory } from "../../../hook/product.slice";
+import { setSelectedCategory } from "../../../hook/slice/product.slice";
 
 const Collection = ({ category }) => {
   const dispatch = useDispatch();

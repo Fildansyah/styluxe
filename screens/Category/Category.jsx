@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   selectedCategoryState,
   setSelectedProduct,
-} from "../../hook/product.slice";
+} from "../../hook/slice/product.slice";
 
 const Category = () => {
   const navigation = useNavigation();
@@ -69,7 +69,7 @@ const Category = () => {
               }}
               style={{ width: 200, height: 200 }}
             />
-            <Text style={{ fontFamily: "bold", fontSize: 20, color: COLORS.primary }}>Sorry We Don't Have {selectedCategory}</Text>
+            <Text style={{ fontFamily: "bold", fontSize: 20, color: COLORS.primary }}>Sorry We Dont Have {selectedCategory}</Text>
           </View>
         )}
       </View>

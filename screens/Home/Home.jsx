@@ -18,7 +18,6 @@ import {
   Welcome,
 } from "../../components";
 import { COLORS } from "../../constants";
-import AnimatedTitle from "../../AnimatedText";
 import { featuredMenu } from "../../mocks/home";
 
 const Home = () => {

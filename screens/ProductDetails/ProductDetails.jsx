@@ -1,8 +1,6 @@
 import {
-  Dimensions,
   Image,
   ScrollView,
-  StyleSheet,
   Text,
   TouchableOpacity,
   View,
@@ -14,13 +12,12 @@ import styles from "./ProductDetails.style";
 import {
   Fontisto,
   Ionicons,
-  MaterialCommunityIcons,
   SimpleLineIcons,
 } from "@expo/vector-icons";
 import { COLORS, SIZES } from "../../constants";
 import { useNavigation } from "@react-navigation/native";
 import Carousel from "react-native-reanimated-carousel";
-import { selectedProductState } from "../../hook/product.slice";
+import { selectedProductState } from "../../hook/slice/product.slice";
 import { useSelector } from "react-redux";
 
 const ProductDetails = () => {
@@ -70,6 +67,7 @@ const ProductDetails = () => {
         scrollAnimationDuration={2000}
         renderItem={({ index, item: src }) => (
           <View
+            key={index}
             style={{
               flex: 1,
               borderRadius: 10,
@@ -136,8 +134,9 @@ const ProductDetails = () => {
         <View style={styles.sizeContainer}>
           <Text style={styles.sizeTitle}>Select Size</Text>
           <View style={styles.sizeSelection}>
-            {sizes.map((size) => (
+            {sizes.map((size, idx) => (
               <TouchableOpacity
+                key={idx}
                 style={
                   selectedSize === size ? styles.size_selected : styles.size
                 }
