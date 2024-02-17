@@ -9,6 +9,7 @@ import { Cart, Category, MyProfile, ProductDetails, Search } from "./screens";
 import { Provider } from "react-redux";
 import store from "./hook/store";
 import useAuth from "./hook/auth";
+import { StatusBar } from "react-native";
 
 const Stack = createNativeStackNavigator();
 
@@ -34,6 +35,10 @@ export default function App() {
 
   return (
     <Provider store={store}>
+      <StatusBar 
+          barStyle={"dark-content"}
+          backgroundColor={"white"}
+          />
       <NavigationContainer>
         <Stack.Navigator>
           {/* home */}

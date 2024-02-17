@@ -21,16 +21,16 @@ const Login = () => {
     email: "",
     password: "",
   });
-  const [loginMutation, { isLoading }] = useLoginMutation();
+  const [loginMutation, { isLoading, error }] = useLoginMutation();
 
   const navigation = useNavigation();
 
   const handleLogin = async () => {
     try {
-      const { data } = await loginMutation(authData); // Call the mutation with authData
-      const token = data.token;
-      const responseCode = data.code;
-      const tokenExpires = data.expiresIn;
+      const { data } = await loginMutation(authData);
+      const token = data?.token;
+      const responseCode = data?.code;
+      const tokenExpires = data?.expiresIn;
 
       if (responseCode === 200) {
         await AsyncStorage.setItem("token", token);
@@ -47,7 +47,7 @@ const Login = () => {
         Alert.alert("Error", "Login failed. Please try again.");
       }
     } catch (error) {
-      console.error("Login failed:", error);
+      console.log('erorlogin', error);
       Alert.alert("Error", "Login failed. Please try again.");
     }
   };
