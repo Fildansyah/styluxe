@@ -83,7 +83,9 @@ const UserProfile = () => {
             <ProfileMenu
               iconName={"home-outline"}
               label={"My Address"}
-              onPressIn={() => {}}
+              onPressIn={() => {
+                navigation.navigate("MyAddress");
+              }}
             />
             <ProfileMenu
               iconName={"card-outline"}

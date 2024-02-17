@@ -5,7 +5,7 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
-import { Cart, Category, MyProfile, ProductDetails, Search } from "./screens";
+import { Cart, Category, MyAddress, MyProfile, ProductDetails, Search } from "./screens";
 import { Provider } from "react-redux";
 import store from "./hook/store";
 import useAuth from "./hook/auth";
@@ -73,6 +73,11 @@ export default function App() {
             <Stack.Screen 
             name="MyProfile"
             component={MyProfile}
+            options={{ headerShown: false }}
+            />
+            <Stack.Screen 
+            name="MyAddress"
+            component={MyAddress}
             options={{ headerShown: false }}
             />
           {/* profile */}

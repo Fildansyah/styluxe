@@ -32,7 +32,7 @@ const MyProfile = () => {
 ]
 
   return (
-    <SafeAreaView>
+    <SafeAreaView style={{flex: 1}}>
       <View style={styles.headerContainer}>
         <TouchableOpacity
           onPressIn={() => {
@@ -128,7 +128,7 @@ const MyProfile = () => {
         </View>
 
         <TouchableOpacity
-          style={{ paddingBottom: 80, paddingHorizontal: 30, paddingTop: 20 }}
+          style={{ paddingHorizontal: 30, paddingVertical: 20 }}
         >
           <View
             style={{

@@ -11,7 +11,7 @@ const Search = () => {
   const navigation = useNavigation();
 
   return (
-    <SafeAreaView style={{flexDirection:'row', alignItems: 'center', paddingHorizontal: 5, gap: 10}}>
+    <SafeAreaView style={{flex: 1 ,flexDirection:'row', alignItems: 'center', paddingHorizontal: 5, gap: 10}}>
       <TouchableOpacity onPressIn={()=>{ navigation.goBack()}}>
           <Ionicons name="chevron-back-circle" size={30} color={COLORS.primary}/>
       </TouchableOpacity>
@@ -20,9 +20,6 @@ const Search = () => {
           <TextInput
             value=""
             style={styles.searchInput}
-            onPressIn={() => {
-              navigation.navigate("Search");
-            }}
             placeholder="What are you looking for ?"
           />
         </View>

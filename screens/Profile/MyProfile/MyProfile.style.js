@@ -6,6 +6,7 @@ const styles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 5,
+    paddingVertical: 10,
     gap: 10,
   },
   imageContainer: {

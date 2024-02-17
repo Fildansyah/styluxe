@@ -29,7 +29,7 @@ const Home = () => {
   const width = Dimensions.get("window").width;
   const height = Dimensions.get("window").height;
   return (
-    <SafeAreaView style={{ marginBottom: "25%", backgroundColor: COLORS.lightGray }}>
+    <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightGray }}>
       <View style={styles.appBarWrapper}>
         <View style={styles.appBar}>
           <View style={{ flexDirection: "row", gap: 5 }}>
