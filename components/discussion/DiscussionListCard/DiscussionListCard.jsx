@@ -3,51 +3,71 @@ import React from "react";
 import { COLORS } from "../../../constants";
 import { Ionicons } from "@expo/vector-icons";
 import styles from "./DiscussionListCard.style";
+import { TouchableOpacity } from "react-native-gesture-handler";
 
 const DiscussionListCard = () => {
   return (
-    <View style={styles.container}>
-      <Text numberOfLines={1} ellipsizeMode="tail" style={styles.title}>
-        Ide Outfit belanja makanan kucing Jantan
-      </Text>
-      <View style={styles.userContainer}>
-        <Image
-          source={require("../../../images/profile.jpeg")}
-          style={styles.profileImage}
-        />
-        <View style={styles.userInfo}>
-          <View style={styles.nameContainer}>
-            <Text style={styles.name}>john Doe</Text>
-            <Text style={styles.time}>6h ago</Text>
-          </View>
-          <View style={styles.tagContainer}>
-            <View style={styles.tag}>
-              <Text style={styles.tagText}>Outfit</Text>
+    <TouchableOpacity activeOpacity={0.8}>
+      <View style={styles.container}>
+        <Text numberOfLines={2} ellipsizeMode="tail" style={styles.title}>
+          Ide Outfit belanja makanan kucing Jantan
+        </Text>
+        <View style={styles.userContainer}>
+          <Image
+            source={require("../../../images/profile.jpeg")}
+            style={styles.profileImage}
+          />
+          <View style={styles.userInfo}>
+            <View style={styles.nameContainer}>
+              <View
+                style={{ flexDirection: "row", gap: 5, alignItems: "center" }}
+              >
+                <Text style={styles.name}>john Doe</Text>
+                <Text style={styles.mail}>john@mail.com</Text>
+              </View>
+              <Text style={styles.time}>6h ago</Text>
+            </View>
+            <View style={styles.tagContainer}>
+              <View style={styles.tag}>
+                <Text style={styles.tagText}>Outfit</Text>
+              </View>
             </View>
           </View>
         </View>
-      </View>
-      <View style={styles.content}>
-        <Text style={styles.contentText}>
-          The three main languages you need to know well are HTML, CSS, and
-          JavaScript. From there you can focus on frameworks, libraries, and
-          other useful tools.
-        </Text>
-      </View>
-      <View style={styles.footer}>
-        <View style={styles.footerLeft}>
-          <Ionicons name="bookmark-outline" size={24} color={COLORS.primary} />
-          <View style={styles.commentContainer}>
-            <Ionicons name="chatbubble" size={18} color={COLORS.primary} />
-            <Text style={styles.commentText}>add comment (30)</Text>
+        <View style={styles.content}>
+          <Text style={styles.contentText}>
+            Ketika berbelanja makanan kucing, keselesaan dan fungsionalitas
+            harus menjadi prioritas utama. Ini berarti memilih pakaian yang
+            memungkinkan gerakan bebas dan nyaman saat berjalan di sekitar toko
+            hewan peliharaan. Pakaian yang terlalu ketat atau terlalu longgar
+            dapat mengganggu dan mengurangi kenyamanan kita saat berbelanja.
+          </Text>
+        </View>
+        <View style={styles.footer}>
+          <View style={styles.footerLeft}>
+            <TouchableOpacity>
+              <Ionicons
+                name="bookmark-outline"
+                size={24}
+                color={COLORS.primary}
+              />
+            </TouchableOpacity>
+            <TouchableOpacity>
+              <View style={styles.commentContainer}>
+                <Ionicons name="chatbubble" size={18} color={COLORS.primary} />
+                <Text style={styles.commentText}>add comment (30)</Text>
+              </View>
+            </TouchableOpacity>
           </View>
-        </View>
-        <View style={styles.footerRight}>
-          <Ionicons name="heart-outline" size={24} color={COLORS.primary} />
-          <Text style={styles.likes}>10</Text>
+          <TouchableOpacity>
+            <View style={styles.footerRight}>
+              <Ionicons name="heart-outline" size={24} color={COLORS.primary} />
+              <Text style={styles.likes}>10</Text>
+            </View>
+          </TouchableOpacity>
         </View>
       </View>
-    </View>
+    </TouchableOpacity>
   );
 };
 

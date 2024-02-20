@@ -51,7 +51,7 @@ const DrawerNavigationDiscussion = () => {
           headerShown: false,
           drawerIcon: () => (
             <Ionicons
-              name="chatbox-ellipses"
+              name="globe-outline"
               size={24}
               color={COLORS.primary}
             />

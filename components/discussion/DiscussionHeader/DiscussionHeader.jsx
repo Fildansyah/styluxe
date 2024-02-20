@@ -17,12 +17,13 @@ const DiscussionHeader = ({ title }) => {
         paddingHorizontal: 15,
         borderBottomWidth: 1,
         borderColor: COLORS.gray2,
+        justifyContent: "space-between",
       }}
     >
       <TouchableOpacity onPress={() => navigation.openDrawer()}>
         <Ionicons name="menu" size={32} color={COLORS.primary} />
       </TouchableOpacity>
-      <View style={{ flex: 1, alignItems: "center" }}>
+      <View style={{ alignItems: "center" }}>
         <Text
           style={{
             fontFamily: "bold",
@@ -33,6 +34,9 @@ const DiscussionHeader = ({ title }) => {
           {title}
         </Text>
       </View>
+      <TouchableOpacity>
+        <Ionicons name="notifications" size={32} color={COLORS.primary} />
+      </TouchableOpacity>
     </View>
   );
 };

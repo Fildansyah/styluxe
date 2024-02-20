@@ -87,8 +87,6 @@ const Home = () => {
           calc={1.5}
           renderItem={({ index, item }) => <Collection category={item.category} />}
         />
-       <View style={{height:40}}>
-      </View>
       </ScrollView>
       
     </SafeAreaView>

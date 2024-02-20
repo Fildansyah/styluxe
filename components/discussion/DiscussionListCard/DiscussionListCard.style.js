@@ -12,6 +12,10 @@ const styles = StyleSheet.create({
       fontFamily: "semibold",
       fontSize: 20,
     },
+    mail: {
+        fontFamily: "regular",
+        fontSize: 12,
+    },
     userContainer: {
       paddingTop: 5,
       flexDirection: "row",
