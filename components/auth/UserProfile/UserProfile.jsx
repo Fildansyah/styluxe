@@ -7,8 +7,15 @@ import { LogoutModal, ProfileMenu, ProfpicModal } from "../../profile";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { useNavigation } from "@react-navigation/native";
 import { useDispatch, useSelector } from "react-redux";
-import { biodataState, setBiodata, setToken } from "../../../hook/slice/auth.slice";
+import {
+  biodataState,
+  setBiodata,
+  setToken,
+  tokenState,
+} from "../../../hook/slice/auth.slice";
 import { useGetProfileQuery } from "../../../hook/api/profileAPI";
+import { useGetAddressesQuery } from "../../../hook/api/addressApi";
+import { setAddress } from "../../../hook/slice/profile.slice";
 
 const UserProfile = () => {
   const [modalLogout, setModalLogout] = useState(false);
@@ -19,13 +26,20 @@ const UserProfile = () => {
   const biodata = useSelector(biodataState);
   const navigation = useNavigation();
   const dispatch = useDispatch();
-  const { data: profile, error, isLoading } = useGetProfileQuery();
+  const { data: profile, error, isLoading, refetch } = useGetProfileQuery();
+  const { data: address } = useGetAddressesQuery();
+  const token = useSelector(tokenState);
+
+  console.log('adress', address)
 
   useEffect(() => {
-    if (profile) {
-      dispatch(setBiodata(profile?.data));
+    if (token) {
+      refetch();
     }
-  }, [profile]);
+    if (profile) {
+      dispatch(setBiodata(profile.data));
+    }
+  }, [token, profile]);
 
   const toggleModal = () => {
     setModalLogout(!modalLogout);
@@ -43,6 +57,13 @@ const UserProfile = () => {
 
     navigation.reset({ index: 0, routes: [{ name: "Profile" }] });
   };
+
+  const handleAddress = () => {
+    if (address) {
+      dispatch(setAddress(address.data));
+      navigation.navigate("MyAddress");
+    }
+  }
 
   return (
     <View>
@@ -83,9 +104,7 @@ const UserProfile = () => {
             <ProfileMenu
               iconName={"home-outline"}
               label={"My Address"}
-              onPressIn={() => {
-                navigation.navigate("MyAddress");
-              }}
+              onPressIn={handleAddress}
             />
             <ProfileMenu
               iconName={"card-outline"}

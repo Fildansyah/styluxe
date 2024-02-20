@@ -7,3 +7,4 @@ export * from "./Cart";
 export * from "./Category";
 export * from "./Stylist";
 export * from "./Profile";
+export * from './Register'

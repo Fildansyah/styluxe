@@ -7,8 +7,6 @@ import useAuth from "../../../hook/auth";
 const Profile = () => {
   const token = useAuth();
 
-  console.log('token', token)
-
   return (
     <SafeAreaView style={styles.container}>
       {!token ? (

@@ -1,8 +1,8 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { API_URL } from '../../utils/env';
 
-export const profileApi = createApi({
-    reducerPath: 'profileApi',
+export const addressApi = createApi({
+    reducerPath: 'addressApi',
     baseQuery: fetchBaseQuery({
         baseUrl: API_URL,
         prepareHeaders: (headers, { getState }) => {
@@ -13,15 +13,15 @@ export const profileApi = createApi({
             return headers;
         },
     }),
-    tagTypes: ['Profile'],
+    tagTypes: ['Address'],
     endpoints: (builder) => ({
-        getProfile: builder.query({
+        getAddresses: builder.query({
             query: () => ({
-                url: '/user/profile',
+                url: '/user/address',
             }),
-            providesTags: ['Profile'],
-        })
+            providesTags: ['Address'],
+        }),
     }),
-});
+})
 
-export const { useGetProfileQuery } = profileApi;
+export const { useGetAddressesQuery } = addressApi

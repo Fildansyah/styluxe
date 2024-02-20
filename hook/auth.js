@@ -19,16 +19,10 @@ const useAuth = () => {
           if (expirationTime > Date.now()) {
             dispatch(setToken(storedToken));
           } else {
-            await AsyncStorage.removeItem("token");
-            await AsyncStorage.removeItem("tokenExpires");
-            dispatch(setToken(null));
-            dispatch(setBiodata({}));
+            await clearTokenAndBiodata();
           }
         } else {
-          await AsyncStorage.removeItem("token");
-          await AsyncStorage.removeItem("tokenExpires");
-          dispatch(setToken(null));
-          dispatch(setBiodata({}));
+          await clearTokenAndBiodata();
         }
       } catch (error) {
         console.error("Error retrieving token:", error);
@@ -36,8 +30,15 @@ const useAuth = () => {
       }
     };
 
+    const clearTokenAndBiodata = async () => {
+      await AsyncStorage.removeItem("token");
+      await AsyncStorage.removeItem("tokenExpires");
+      dispatch(setToken(null));
+      dispatch(setBiodata({}));
+    };
+
     getTokenFromStorage();
-  }, []);
+  }, [dispatch]);
 
   return token;
 };

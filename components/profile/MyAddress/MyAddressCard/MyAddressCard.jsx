@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { COLORS, SIZES } from "../../../../constants";
 import { Ionicons } from "@expo/vector-icons";
 
-const MyAddressCard = () => {
+const MyAddressCard = ({address}) => {
     const [isPrimary, setIsPrimary] = useState(false);
   return (
     <View
@@ -36,15 +36,14 @@ const MyAddressCard = () => {
           </Text>
         </View>
       </View>
-      <Text style={{ fontFamily: "bold", paddingVertical: 5 }}>Fildansyah</Text>
-      <Text style={{ fontFamily: "regular" }}>08123456</Text>
+      <Text style={{ fontFamily: "bold", paddingVertical: 5 }}>{address?.receiver_name}</Text>
+      <Text style={{ fontFamily: "regular" }}>{address?.mobile}</Text>
       <Text
         numberOfLines={2}
         ellipsizeMode="tail"
         style={{ fontFamily: "regular" }}
       >
-        BSD Jalan Salvia 2 Blok UA No.50/51 sektor 1.2 ext, BSD Serpong Kota
-        Tangerang Selatan 153418{" "}
+        {address?.address}
       </Text>
 
     <View style={{flexDirection: 'row', gap: 10 }}>

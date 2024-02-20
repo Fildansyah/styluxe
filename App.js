@@ -5,10 +5,17 @@ import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { useCallback } from "react";
 import BottomTabNavigation from "./navigation/BottomTabNavigation";
-import { Cart, Category, MyAddress, MyProfile, ProductDetails, Search } from "./screens";
+import {
+  Cart,
+  Category,
+  MyAddress,
+  MyProfile,
+  ProductDetails,
+  Register,
+  Search,
+} from "./screens";
 import { Provider } from "react-redux";
 import store from "./hook/store";
-import useAuth from "./hook/auth";
 import { StatusBar } from "react-native";
 
 const Stack = createNativeStackNavigator();
@@ -22,7 +29,7 @@ export default function App() {
     bold: require("./fonts/Poppins-Bold.ttf"),
     extrabold: require("./fonts/Poppins-ExtraBold.ttf"),
   });
-    
+
   const onLayoutRootView = useCallback(async () => {
     if (fontsLoaded) {
       await SplashScreen.hideAsync();
@@ -35,10 +42,7 @@ export default function App() {
 
   return (
     <Provider store={store}>
-      <StatusBar 
-          barStyle={"dark-content"}
-          backgroundColor={"white"}
-          />
+      <StatusBar barStyle={"dark-content"} backgroundColor={"white"} />
       <NavigationContainer>
         <Stack.Navigator>
           {/* home */}
@@ -70,18 +74,22 @@ export default function App() {
           {/* home */}
 
           {/* profile */}
-            <Stack.Screen 
+          <Stack.Screen
             name="MyProfile"
             component={MyProfile}
             options={{ headerShown: false }}
-            />
-            <Stack.Screen 
+          />
+          <Stack.Screen
             name="MyAddress"
             component={MyAddress}
             options={{ headerShown: false }}
-            />
+          />
+          <Stack.Screen
+            name="Register"
+            component={Register}
+            options={{ headerShown: false }}
+          />
           {/* profile */}
-
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

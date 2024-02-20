@@ -47,7 +47,7 @@ const Login = () => {
         Alert.alert("Error", "Login failed. Please try again.");
       }
     } catch (error) {
-      console.log('erorlogin', error);
+      console.log("erorlogin", error);
       Alert.alert("Error", "Login failed. Please try again.");
     }
   };
@@ -108,6 +108,16 @@ const Login = () => {
             )}
           </View>
         </TouchableOpacity>
+        <View style={{ flexDirection: "row", gap: 5 }}>
+          <Text style={{ fontFamily: "regular" }}>
+            Don&apos;t have an account?
+          </Text>
+          <TouchableOpacity onPress={() => navigation.navigate("Register")}>
+            <Text style={{ fontFamily: "bold", color: COLORS.primary }}>
+              Sign up
+            </Text>
+          </TouchableOpacity>
+        </View>
       </View>
     </View>
   );
