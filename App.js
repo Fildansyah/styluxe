@@ -8,6 +8,7 @@ import BottomTabNavigation from "./navigation/BottomTabNavigation";
 import {
   Cart,
   Category,
+  DiscussionDetails,
   MyAddress,
   MyProfile,
   ProductDetails,
@@ -90,6 +91,14 @@ export default function App() {
             options={{ headerShown: false }}
           />
           {/* profile */}
+
+          {/* discussion */}
+          <Stack.Screen 
+          name="DiscussionDetails"
+          component={DiscussionDetails}
+          options={{ headerShown: false }}
+          />
+          {/* discussion */}
         </Stack.Navigator>
       </NavigationContainer>
     </Provider>

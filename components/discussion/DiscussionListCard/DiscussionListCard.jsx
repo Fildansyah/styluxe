@@ -4,10 +4,12 @@ import { COLORS } from "../../../constants";
 import { Ionicons } from "@expo/vector-icons";
 import styles from "./DiscussionListCard.style";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { useNavigation } from "@react-navigation/native";
 
 const DiscussionListCard = () => {
+  const navigation = useNavigation();
   return (
-    <TouchableOpacity activeOpacity={0.8}>
+    <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate("DiscussionDetails")} >
       <View style={styles.container}>
         <Text numberOfLines={2} ellipsizeMode="tail" style={styles.title}>
           Ide Outfit belanja makanan kucing Jantan
@@ -52,7 +54,7 @@ const DiscussionListCard = () => {
                 color={COLORS.primary}
               />
             </TouchableOpacity>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={() => navigation.navigate("DiscussionDetails")}>
               <View style={styles.commentContainer}>
                 <Ionicons name="chatbubble" size={18} color={COLORS.primary} />
                 <Text style={styles.commentText}>add comment (30)</Text>

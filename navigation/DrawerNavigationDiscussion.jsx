@@ -81,6 +81,7 @@ const styles = StyleSheet.create({
     flexDirection: "col",
     alignItems: "start",
     gap: 10,
+    marginBottom: 10
   },
   profileImage: {
     width: 40,
