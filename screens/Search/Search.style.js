@@ -2,6 +2,12 @@ import { StyleSheet } from "react-native";
 import { COLORS, SIZES } from "../../constants";
 
 const styles = StyleSheet.create({
+    container: {
+      flexDirection: "row",
+      alignItems: "center",
+      paddingHorizontal: 5,
+      gap: 10,
+    },
     searchContainer: {
         flexDirection: "row",
         justifyContent: "center",

@@ -3,6 +3,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Discussion, Home, Profile, Stylist } from "../screens";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../constants/index";
+import DrawerNavigationDiscussion from "./DrawerNavigationDiscussion";
 
 const Tab = createBottomTabNavigator();
 
@@ -38,7 +39,7 @@ const BottomTabNavigation = () => {
       />
       <Tab.Screen
         name="Discussion"
-        component={Discussion}
+        component={DrawerNavigationDiscussion}
         options={{
           tabBarIcon: ({ focused }) => {
             return (

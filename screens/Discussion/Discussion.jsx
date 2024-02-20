@@ -1,18 +1,32 @@
-import { View, Text, Image } from 'react-native'
-import React from 'react'
+import { ScrollView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from "@react-navigation/native";
 
+import { PanGestureHandler } from "react-native-gesture-handler";
+import { DiscussionHeader, DiscussionListCard } from "../../components";
 
 const Discussion = () => {
-  return (
-    <SafeAreaView style={{ flex: 1 , justifyContent: 'center', alignItems: 'center', backgroundColor: 'white' }}>
-      <Text style={{fontFamily: "bold", fontSize: 40, color:'#233a64' }}>DISCUSION</Text>
-      <Image
-      source={{ uri: 'https://i0.wp.com/iaihnwlotim.ac.id/wp-content/uploads/2022/12/Maintenance-Page.jpg?fit=1920%2C1080&ssl=1'}}
-      style={{ width: '100%', height: '25%' }}
-      />
-    </SafeAreaView>
-  )
-}
+  const navigation = useNavigation();
 
-export default Discussion
+  const handleGesture = ({ nativeEvent }) => {
+    if (nativeEvent.translationX > 50) {
+      navigation.openDrawer();
+    }
+  };
+
+  return (
+    <PanGestureHandler onGestureEvent={handleGesture}>
+      <SafeAreaView style={{ flex: 1 }}>
+        <DiscussionHeader title={"Discussion"} />
+        <ScrollView style={{paddingHorizontal: 10}}>
+        <DiscussionListCard />
+        </ScrollView>
+      </SafeAreaView>
+    </PanGestureHandler>
+  );
+};
+
+export default Discussion;
+
+const styles = StyleSheet.create({});
