@@ -63,6 +63,8 @@ const styles = StyleSheet.create({
     },
     content: {
       paddingTop: 20,
+      flexDirection: "column",
+      gap: 10,
     },
     contentText: {
       fontFamily: "regular",

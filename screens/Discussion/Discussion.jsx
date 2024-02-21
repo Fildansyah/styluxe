@@ -1,7 +1,7 @@
 import {
   Animated,
+  FlatList,
   RefreshControl,
-  ScrollView,
   TouchableOpacity,
   View,
 } from "react-native";
@@ -56,33 +56,31 @@ const Discussion = () => {
   };
 
   const scrollToTop = () => {
-    scrollViewRef.current.scrollTo({ y: 0, animated: true });
+    scrollViewRef.current.scrollToOffset({ offset: 0, animated: true });
   };
 
   const discussionRepeater = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      
       <PanGestureHandler onGestureEvent={handleGesture}>
         <View>
           <DiscussionHeader title={"Explore"} />
         </View>
       </PanGestureHandler>
 
-      <ScrollView
+      <FlatList
         ref={scrollViewRef}
+        data={discussionRepeater}
+        renderItem={({ item, index }) => <DiscussionListCard key={index} />}
+        keyExtractor={(item, index) => index.toString()}
         style={{ paddingHorizontal: 10 }}
         onScroll={(event) => handleScroll(event)}
         scrollEventThrottle={10}
         refreshControl={
           <RefreshControl refreshing={refreshing} onRefresh={onRefresh} />
         }
-      >
-        {discussionRepeater.map((item, index) => (
-          <DiscussionListCard key={index} />
-        ))}
-      </ScrollView>
+      />
 
       {scrollDirection === "up" ? (
         <TouchableOpacity>

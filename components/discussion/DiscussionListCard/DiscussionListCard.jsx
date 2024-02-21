@@ -1,15 +1,24 @@
-import { Image, Text, View } from "react-native";
-import React from "react";
+import { FlatList, Image, Text, TouchableOpacity, View } from "react-native";
+import React, { useState } from "react";
 import { COLORS } from "../../../constants";
 import { Ionicons } from "@expo/vector-icons";
 import styles from "./DiscussionListCard.style";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 
 const DiscussionListCard = () => {
   const navigation = useNavigation();
+
+  const [images, setImages] = useState([
+    { id: 1, source: require("../../../images/space.jpg"), preview: false },
+    { id: 2, source: require("../../../images/space.jpg"), preview: false },
+    { id: 3, source: require("../../../images/space.jpg"), preview: false },
+  ]);
+
   return (
-    <TouchableOpacity activeOpacity={0.8} onPress={() => navigation.navigate("DiscussionDetails")} >
+    <TouchableOpacity
+      activeOpacity={0.8}
+      onPress={() => navigation.navigate("DiscussionDetails")}
+    >
       <View style={styles.container}>
         <Text numberOfLines={2} ellipsizeMode="tail" style={styles.title}>
           Ide Outfit belanja makanan kucing Jantan
@@ -44,6 +53,30 @@ const DiscussionListCard = () => {
             hewan peliharaan. Pakaian yang terlalu ketat atau terlalu longgar
             dapat mengganggu dan mengurangi kenyamanan kita saat berbelanja.
           </Text>
+          {images.length === 1 ? (
+            <TouchableOpacity style={{ flex: 1, maxHeight: 200 }}>
+              <Image
+                source={require("../../../images/space.jpg")}
+                style={{ width: "100%", height: "100%" }}
+              />
+            </TouchableOpacity>
+          ) : (
+            <FlatList
+              data={images}
+              numColumns={2}
+              renderItem={({ item }) => (
+                <TouchableOpacity
+                  style={{ flex: 1, maxHeight: 200, padding: 2 }}
+                >
+                  <Image
+                    source={require("../../../images/space.jpg")}
+                    style={{ width: "100%", height: "100%" }}
+                  />
+                </TouchableOpacity>
+              )}
+              keyExtractor={(item, index) => index.toString()}
+            />
+          )}
         </View>
         <View style={styles.footer}>
           <View style={styles.footerLeft}>
@@ -54,7 +87,9 @@ const DiscussionListCard = () => {
                 color={COLORS.primary}
               />
             </TouchableOpacity>
-            <TouchableOpacity onPress={() => navigation.navigate("DiscussionDetails")}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate("DiscussionDetails")}
+            >
               <View style={styles.commentContainer}>
                 <Ionicons name="chatbubble" size={18} color={COLORS.primary} />
                 <Text style={styles.commentText}>add comment (30)</Text>

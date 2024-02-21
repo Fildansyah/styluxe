@@ -68,6 +68,7 @@ const styles = StyleSheet.create({
   },
   content: {
     paddingTop: 20,
+    gap: 10
   },
   contentText: {
     fontFamily: "regular",
