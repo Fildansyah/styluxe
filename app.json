@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "percobaan",
-    "slug": "percobaan",
+    "name": "Styluxe",
+    "slug": "Styluxe",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/ic_launcher.png",
@@ -11,9 +11,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
     },
@@ -22,7 +20,7 @@
         "foregroundImage": "./assets/ic_launcher.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.fildansyah.percobaan"
+      "package": "com.fildansyah.Styluxe"
     },
     "web": {
       "favicon": "./assets/favicon.png"
