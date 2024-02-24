@@ -5,25 +5,25 @@ export const featuredMenu = [
       {
         id: 1,
         name: "Jackets",
-        img: "https://images.lululemon.com/is/image/lululemon/LW3EP2S_026083_1?size=800,800",
+        img: "https://lh3.googleusercontent.com/pw/ABLVV87eemAmVU9_JxsVLntpM3X1lFlNukXPZBrMgbNA9fAf-Jv3XxrHUlGD0Ky6dhFSqDsxl3wdwnEznb0gBekj9yfSXZBCHDI2V6RYlbEmI-j0op1kjQQNvXImBKO9QeiBHIWJ0Le9wm-IUoNh1NhZcvhE1qcgjUTg81qUk0-hO5PPKcnup_gVKPV7Y0uO8RrDUy_jHEw_AgWhzOvFCPjfWkGjsx5RY-q8CSiS7psE6bOEnXERG2VtGIIPGiTTNVC7fnMcngZylfXcezBeWOf8QYDlwn9p8PRkV2IhslZXeK2621Ust7-k37jOuheOSJW95wM4yxmpCr6C0i1PI2ma13CJUa2DKL8dRm5_9K5a38G5laR0v2UlkqfArFRN6lq546gfkMbFu0kQm8Ok-eC3-LD3hpJ_rzx6W7yZjVF4A1brrlDn1JW6OvydSoFbT-IcukTQrIZkzyZVnTZWl_2_OaAZ1zYn4_nf8IipHDMudeULPdrQZ0GP3Nitl6TOYdl-jaSkpv46Gr8QT5PyyRX4n9EegRaxXJpHfBGzNjKA0U4vvbVnhMaSBZAxMPkGQitV0QQiBDRikfz4WysVFNI8ypwQeQs4DIK598b2D5XnlSw_Zi1Ovk9fzhJ1UvybcXxQfm03rRE5RoBDWpbdb1XFUPJY_hnNqvN4j_KO4j9o4igvEYU1PDj4UZ0Cp5gj6VILEifAFNUWzuItsKFs9j5G7O3VPsw-y8Lg4vH_06uC8axKOHf18vBCe6eyrx075pSeMJbqNIkDv0kwE8l6qMv3g6_8KHAMZvBmWsfp4PMurwYFzV2MDqVTTzODdrjbT0ZgRGFknHlZNPzjiNQxCnJDM8ArTF_GZpLQHFy61a2psS1HwAOg-QVV7Ro0vc6dSKOtoI2ByJ0F_BvJGN_hZue5ObaqO5gYy8ghLUjEjh_EQbJxY-6lpEOo0fOjOpy7QRegd-oAv8y679J0Kcp6wLuDD_z2fiA=w681-h945-s-no-gm?authuser=2",
         height: 162,
       },
       {
         id: 2,
         name: "Dress",
-        img: "https://assets.myntassets.com/dpr_1.5,q_60,w_400,c_limit,fl_progressive/assets/images/22969002/2023/5/2/7f9fe1c2-6da1-47fe-b639-281261cc89431682994331602VTRADITIONPinkFitFlareMidiDress1.jpg",
+        img: "https://lh3.googleusercontent.com/pw/ABLVV854aDQRwZboZe0KsShQMQHh3GjG-RX8RFIhc-TqlMPnDr8y-hjJrIwFdmp7Ju8qJqityxvMMNtVGE7jCmvrPqCGAizZCqypnb_lup0_n3yxQc6x-hlnTHdIGWv2iyhlUyilcrFydcCL6aM9YmBb5Rq6S0CBPkEz4b6VErXbziyRxfl_33X67dSwCUdJXYVFzZx6rDwmeJKykH0tNsU_tf2Ie-M29HUdTc3OP0R7HEVePvZwiY8veNGbEBfO1Gg6dEWy2QA-smLIGCawc6ATVFrnccV7YxF9bd7UlD_kCpcfiYekVyXBhPx0E6I5rsMtR0CAK2_qcWIIS9ogeNc1-yzShpJ-OTcGvpuTHClsKSdufdYpbtSzAZyuepObikBWGs5Uh9eT3-AvFhITABvgaO8HAmQdlINo0XNzvFyPTlkp9Aqgr0fTPgFCiJZCsGe2Uijn6XcZyBIt2aUl-GS0j_1oIixpjY6JTKJTPxttrSlAQC6RK_dqLpKT07AT8gw4du1Wnbxj8UP9if3ZI7Wg1VtctaRfNpP9X5EBwr1AjpD3ROK1vqtaKe8Pkbo5dOSc6wIXXnWbFw7lAN1HpCDWgLBX_1XW23BytypWVIponC4DX7R2LwuKgx954z2S5JLTUZ52zRIfIjB964MZPdnBZqoVXMrNlYhsJZ9Iim1ZJIbi3CKBt1Xf_ayHHvDeO7pilIW-1fYHVfzsFloFJBBKn89lVElyji135UsQsXy4RRwozDU3RjEq8YHR1k9hJKjIxg8yt6K8zpQs0IrmG3fPTRIfYtsZOFiQeW2KQeuiuckKzsNTFpFPHu2dNjFap3gUSyogq-k9wZy_kgOm6Do5bGDaeGRG4tT5RJmHO5B-pTjSABNEV1KrC6gRzEfRt6IwoX-0g_4Fzpkrwc1YvDCsPOQkKft1EalV-uKrzP7LoqYz-VSFnVcydTlVTK8_3CdP1YwTI05k5tJ6ebbVxzbHSPFCEryd=w600-h800-s-no-gm?authuser=2",
         height: 250,
       },
       {
         id: 3,
         name: "Pants",
-        img: "https://www.picture-organic-clothing.com/dw/image/v2/BGFP_PRD/on/demandware.static/-/Sites-poc-master-catalog/default/dw14527324/images/model/MPT127_B_03.jpg?sw=1200&sh=1200&sm=fit",
+        img: "https://lh3.googleusercontent.com/pw/ABLVV84szahy-2oTXFXnk20GNA891Lu6S87Pzld27EUX0pHfhA69i28-6_nvNBTdSUtq9oywq4qpY75i8IXYjUiLQVXF1wyppjRIMqKVFJ9oIBufWVelw9m8WliRhIL27aXfKXY3bMLOtul7VRpuKy_t47u0QHHqJgAZ4zl5w45xv7ib2RSLk9CPEso9S6mEVFUDrQlq-_xI0OwxWkZSe_E7rlErHh47AywQrpzuVC2GMZXu9Nny77gAeakRXNzBt2QfAkvdnkDnZnUkZ2eDF_qRWO8q63Q7x8RX01TcPKy9bA0HCvVoUNduTmQk4OxwdHrrAbP6Bac2zsaUacyu4mOJuDv5Tu602PZzgI9Tfd8QaAHP6jMfrI2_9lZL1fs8OAPfo7iovRE1dlYXtE-Um-uJTB_-6OwfR1oO6mRJTVKx6QeqnGaV3lpZFeEwQwN843ciiUsF1p3McDT1RULp4PJmAo1-r0BLRyRF9bEcKQiVGZqXK8aIIlppw1F1C9uZzgGFFqpWnBoPajBLjgbqpC3BpKW56mtmJoijfPSd_g-HO0_ge44WwrBGq4qkx4x-O3epCzOVb3uKbNsARmzaYc-Fv5a1TQqB_GpHj6DJtxzbxNEOTCK04tvpZl1kTpLisww_FeDTpRbZQ3Ul-j9TAGmU2uLtps4Q4ID7SsDV9dq4v8wVyV3iqvuLcQqmV-4tABn2SnPI-TwnXro8kQ--UeK33gikGZJZyolQePWMYahLdL5ZktQmzeRDO1Nh47GStQRKweepW9Bhtkk9QxV5Q8PEWTExeQtMDdQAZOhdrheQnAfA1zEOoYuGx1XXCs0m70HbdGlPQ98t5sjUx5pLsB92XgZjYnOPu3-QmJUOuwY6Lg9NUE-KTaV6jgmgnrD2pT-hZrpnOWXXc9o7FmFYwLBE77W2padxD1i-fRdrOZcNo7kUlRlskZCAa0mtp4dd6OuJMo5JHVZuMDP58MzMPUBfT0xc6m8=w366-h512-s-no-gm?authuser=2",
         height: 276,
       },
       {
         id: 4,
         name: "Shirts",
-        img: "https://ramrajcotton.in/cdn/shop/files/Shirt1.jpg?v=1697609752",
+        img: "https://lh3.googleusercontent.com/pw/ABLVV842DrqekXOKl6egfDWhIHEt2Qqbvkrf-lRn_IBjeAePbqU-wn3qNEz4SE469lXKFN2aOvyKjdYGrpWCndpl6QD3BFCmrvev0XphhKK1U8qd7CZr7QM-9n0J0BlNyRZl7TdmdBavNRv99Cjm5QATrZMCCWRiKaEe8BvbPUl_FKdjvga3uFz_khW5ENov6okWoYnC00RWZP04uOgs1jdgjIzq5Qla-rB8Q5u3GD5NeVD3f-ei3Vi1-kSAQmvyPsTIhMXY5t8geQz8lxGAQkI9Kku20aY6CqKwDKszvUVSpBkKRezFknQwMAXQJ5sjo0VWt6C-l6GTYfmTdUvZAgD3X-dfZGs4RKOqxyfYFsid1BHY_Zz9w3NbTXlAfQ80MFFwNCrIyS4qM7_RqCxBrcIbS0VXmAANiT7BSWQEFuGSbfLSQPOGofBu6RzHoNdA919-rshxyp-mWqa_N5eKV61jJoD7YvYyggZorE4nZ5c5vzkhlIgQ-jHwP-4hwCL-VAzcuiipUWgeSG_Bb6wnmy_hBgm6b0YDfot6AD4-KI9Gjm0ZJo3a7Bz2ToUCs3zcDcHvbUqYqPif5EmceZ76HYVSjlVeQROQRXILSiUjYpn3ukTzF2WqTgwZ2SWnrAk61zDO1UrwIx1JlnK9LsQJilz9A094MW10IFeH8iH0TccDPC8HOB8E4u2UeRW1MqPkBUu12lpdpNmVTTUm82xer013mpKrCLBFFy0mxviI-04rfsYspPU3s_gDN5eZJcedBAwiMWj29UucrLXlRolx8cGajr-NDXiiwntSlZfklLT9TrNiv2lgqzRl74XUazwozubJfryf0m_L8B5H_EmfrXWPvWVKc5104OUuyVcrgb4YVrbdHU6cAhaZe8s9luheeE26e5WX6LdD9tHANr03bPYv387t0NHPVJvxSOtNZAbgk1RRqFKXxV8Kz2LVnii6gh022jpge6Su23PRATYL7RCNsoSJ8GCt=w700-h933-s-no-gm?authuser=2",
         height: 135,
       },
     ],
@@ -34,27 +34,27 @@ export const featuredMenu = [
       {
         id: 1,
         name: "T-Shirts",
-        img: "https://overlays.co/cdn/shop/files/20230804-DSC03331.jpg?v=1692105093&width=3168",
+        img: "https://lh3.googleusercontent.com/pw/ABLVV86poF6syK-rwIB9SQrCSvbygPDvBV93qrulC_6xI-xITzX8epyFAr79o_ONnEHeZ4MBduoaT0Mtu7ItG8Nu_-lmDRO5ZGk7tQqmV0nDpmijmp6jP_oyIbTBlj5aRpsVR5tw10CslcYMEIpzB1d7ETD7zzROjtC0BNdbMI2xgS5HX91xFSThnuVtiowQDIy1DuVZ38Wt6JMqNbVCX987kSMDcRoJ1KPuyVvtgfppmvC6B181pVU-ZdF-qave9JzQFwXAb1i30hzPUxmJ62HAJhL2t1CcONw0pPZkp2rHLF5J6-hafhRiWYAaPtqgCW1fzAaiGbbFNg-lwCYU0_bcFFo0hQvF9-k1vHCM3U3IQbOvOPyII-WUb6TyRhkvmaq5Vv5fLxWJMzVLM4RESuYgjzGhWgs2odwD2ouhitduz7DXrUZZFI8e1RDDp70CQpC4b6cdqPwVr_LMOxh5j2vfF8-3Tfa2m7NvKSaRNwq0_47eIHIv44V3kkTHEc70gSgTMaKiNIj5wYx0SyCrkH7Y_Z9ANE5E5MNPfTNPm2V7ANO-TTi9br5zv4hx0zDMDbpfmv5FoHRzDL9L9Lb3NfvErutA8w9PkuhoNmOv6DlQvAWuO_g1DRDZbGD4iMPTy55eYFbJciEcXQn7NNYfbjWJ7vKIb9jV2HXlwixtGHaE528hsVECdzrRwJMkidYKp0leX3UrJc1daTjB368vyXdJWvDwmsm21V6xXBGmVscLoOJI9WKBpxH-ZVxcX34C5qyZ84GuFFpaRN4n-Phz436lCviUDs_UlrbUaaVSqjh7M6YWsr_D1Y7ziATEM5JU34jTQydIJVuzCUpXebZ2dN-ByKs5te4F16-QU83hzPkYhi6mNMfQ2s1GoX4tedcgFyhdrErxr3yyNL0zL8BRLMhBa8e0azAFIN2l3Is8ZMLEhIL2UseMLn22CpO_jq_Mz7LAnbzCXRo7wXjBXZUE8uAlJLGKiriz=w710-h945-s-no-gm?authuser=2",
         height: 162,
       },
       {
         id: 2,
-        name: 'Shoes',
-        img: "https://www.melbournepodiatryclinic.net.au/wp-content/uploads/2023/01/asics-choose-running-shoes-lp-article-06032022-2.jpg",
+        name: "Shoes",
+        img: "https://lh3.googleusercontent.com/pw/ABLVV852W-VjIy8dnr2owEXcxobHvQXs5EnfGvGWc6KoYtOrWga893UBXFlgap96xjXNtvVDvweL118kq5UCyiQdRUMCQErnzNCfBhvMcDkawY_aKeAEgnLeDTHcZlRJj6vxcXgDXjrcPzLV5tlfvBAVlqfD2e8vP83UiNBITc3pOmgnZ8NNvlfJPOQn-MdlWG4Cl0wgm4zvuuVFpoZocBH5tyy_lifn60fzZHLNfsB-oQzkRvqvQe7vOM_Meqw2hdcSNyooMBzrBr1RR9XVWP1WFkujcxFdPcMmOMVTnSmaB77R33Hl3VxHl9fqV2k4gtLWoI5IoHLYMyhjzWsseHL4waZ4AtwyQcvnMD7I11z1np11MSiXOFZFj-H4gIhwlJhZCSXTwHfoMFXJLttKyDZk-amhwnZjbr_LXcYu6K_nrE88onzo6wSzfYVBpV0RPnFxTVtARyvowSD1DM0bFJY8aPtlJg9UG-6UmzhytTBjJEYMn3jU5GTgdtNa1VHUtGaDq8oMjZGeU_OYX1Q8mvvIZDSNT6gseM6h1FfOiybUdCfITGBrPh4AMSVaEvRh6kNB50PYbZmiv7WJlhjzrNfT7_6xU-gLPCghac3IenqUf8FFsn3fEsVrUqBo5Mwo3gtAhyPfQNwTcfM1QxB5pAFupzy1qjbK2soFwoYGQydRapp3woTAW9p4tqY_hDeAqXgIOrrifKGTI_idrrghNDpJiIua_GbI20yMkvpHVLVOtO21eNk5TUxy7tVjcPpSepdhKceUn7W_eIazjWN6BJlFmli_mi6lD4S0HVSwsN4UEsPN0hymmcClTx4Dhkd30Cb8Mp6oBWTVlMCRNCZskELq_-jtiW2jptKQCUimcipGp6fgf1cXTg6LKtNZuJlBwlmpkN5e7Gzx6BgD4qOVEW-vvYY-Q956AufkZkSohwdcdH5Qf4MqXu5Rv5jofTlKqEgmcS5nvbyP-vnOoF4ILSwtqpcBnBw=w563-h773-s-no-gm?authuser=2",
         height: 250,
       },
       {
         id: 3,
         name: "Hats",
-        img: "https://media.glamourmagazine.co.uk/photos/62a06c0af321fea9799cfd4b/4:3/w_772,h_579,c_limit/SUN%20HATS%20080622%20SQUARE.jpg",
+        img: "https://lh3.googleusercontent.com/pw/ABLVV84fb7mg7lrZvOLXPxSPA9M8em7lvsXDbXKctlwVJE0xy4cUrEh_1896Aa5hsUwavjWhStAA1N82-_cgDVdewTr0zEjcR5d8qxTovmHPysoOw9OyFQskXBGvDkg9mvEklCcGeOMAq5TBmScdMI1b_c4FEnjk6DmktyH8TNpDhMa49v5e2IhOVzfjjTzHpwpGoDof6ZvP0ZV6lNc78KknPkmMSYWnJ7lqzcybdv59mM7K21KvujEYwOeNdR-LpyG0poFEGZaFr0CRvzraIJVathxWviIlq-3_5iFgnSyw0Biu_Tmg_PGfLWy_hCDsE4kCx5rlqMwn62_nxmfDDklv8X3la6KZQ9y6FWINNi9X7NA1z43YJUkLLu2TjdJV53dA0VO8NinHCP_22XbzwQcWX6w7WTh0Lb_5ySY20k3LtHQlabokwm-p_0Y5pnZXJ263jU6KXE2wxZ169Nfbs7oes0ppv8uSiQV6B32TOPDgV15c6QGCTfXKY7s_UG-da21btCbBuLZmh92olTlOGx0_UVt0Tq_BwoyZPVJpNUpMxYCwaXE_eURYPE9cpaUrDfChuWXrOtsqLmiCOqUUqoBL1gFldeQEfCx-5nO6MCtnFMDjC8t97HltQyCGdY19cfg1GV5kCe4GK5nXlOYvFPjN2pNuXVfb8th0kFbB-gu_87i-qinebq3M8N-I6BnEipB-LyY9guSe0qKVtvhwFnYtfsT30u2uIYYqNuo9dlVo8LxHQW7PJVu31v1INzbT6HimJ8QQpoFoajHs17cjz55IUgC1T9tOJDClTTMRAL3J-V8JMbKYJzDMuMc_Vk2Tb9_t7UKNDbakk2S0HuydTDfSm41E2gmqe6KnmKn8uXpK0K-c5gTGx7amXHdnm5vcu2A8Jlfc_naIb2DY1XRm2fhCPCqchEOfq3_-io5kMxQyjmg_P_BHzcHUDUAqP8b-_Ra-9tzMptIwpPibvGvvN672jA8Qh38=w564-h789-s-no-gm?authuser=2",
         height: 276,
       },
       {
         id: 4,
         name: "Socks",
-        img: "https://www.verywellhealth.com/thmb/asJh31ztwuRkbkYQT6M8HysRQtA=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/GettyImages-606357239-671dc949563340358ad40f050422f4ea.jpg",
+        img: "https://lh3.googleusercontent.com/pw/ABLVV84DZMz6nZ1OVMDezYLvZUI39cymVetKEYOxKHpLvOu3GDeV6lvx4H0Pa8lUK1gsbsPV5zpbZCiP8d1JG_uYV-3EBdP-o4xcPKPwcSKC_XxSo506mw4EIk26A4gifFmzh8IBMtJ9H5z3o0iZwqqBFhHnbFMsReQo6123u6EQIQPqE0etRxYef6ew3xJxjYjLOIyNtXv27kYx7NeSGTlPxn8GYVO5_x8l7zg8KdbX3OnNom8N9CsCuD8xXrZx9VSc0EQQSACPTuKGuPvy9ieaI_VapU1I3xbgZSBjwUXIWTvVkO_H4LTiSNfYXe1qgk2U5YiZbMGIf0JXpBS85x5GEp5tJwjagEwGN3fyGqZFXUBjMcyPV22VF-TAmR_XuCXTLiITwGyo4WlKHQIH2ClascuxrBq-KKw1LSoV6sqTg-u6HNkjgK-XCISAyqcr8BqJgQZ62WXeoQqIjTz6akfPEHIm0uGwYQIBh50owjpEebwfTtOz2nV7hqs2I491JtV5XMsM5BL3JsXU0mR951_dE0iFBKxN71nnIsvlpS6-DWqUhtmnLVwBtg3u2a8SYsDSXen4pUlaIlllMCC-FRi2igVatTNENBvCQqedHl-_0kymncb66L8p8M2BFnqlbs4d_fm5ephoMY7RP6OzecVMEHRDW_FH4md652pT_nvpeu9s3WUJXovNEJLsuOWfMvrIhZjdi7wuo6U30YhvQK-bqA9F-p9RA4i2HihYdIBuVRElYlHvxWnlXfZKq0t5MGHA7eIMAu3YGvkbLfK3kYqTseKgLcCqW_MvkDDt-IJCZAcgD1kh6Hv3-eJdt9iR5NJcWfiJblWnU9dM5r3RUS3_wJPMdg9ucmqbWPcAsqq6GDXUHjGuZHjZUbXEf9zAxfnKZvfT626xMoRB7i-qGs0DQIhfou6pgSlbvxyQFnJRTy7669zkvXxD55eFqrwaOc-awExIFhEcCwlrbpA8Q_nKlo2g87n-=w564-h846-s-no-gm?authuser=2",
         height: 135,
-      }
+      },
     ],
   },
 ];
