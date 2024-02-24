@@ -4,7 +4,6 @@ import {
   Text,
   ScrollView,
   Image,
-  Dimensions,
 } from "react-native";
 import React from "react";
 import { SafeAreaView } from "react-native-safe-area-context";
@@ -26,8 +25,7 @@ const Home = () => {
     "https://media.glamourmagazine.co.uk/photos/657b2069cd763cb5be091396/16:9/w_1280,c_limit/AW%20FASHION%20TRENDS%20141223%20AW-FASHION-TRENDS-MAIN.jpg",
     "https://www.womanindonesia.co.id/wp-content/uploads/2021/11/Trend-fashion-2022-terins-dari-flora-dan-fauna_womanindonesia.jpg",
   ];
-  const width = Dimensions.get("window").width;
-  const height = Dimensions.get("window").height;
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: COLORS.lightGray }}>
       <View style={styles.appBarWrapper}>
@@ -85,10 +83,11 @@ const Home = () => {
           slides={featuredMenu}
           loop={false}
           calc={1.5}
-          renderItem={({ index, item }) => <Collection category={item.category} />}
+          renderItem={({ index, item }) => (
+            <Collection key={index} category={item.category} />
+          )}
         />
       </ScrollView>
-      
     </SafeAreaView>
   );
 };

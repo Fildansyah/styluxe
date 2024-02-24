@@ -5,12 +5,14 @@ import { authApi } from "./api/authApi";
 import { profileApi } from "./api/profileAPI";
 import { addressApi } from "./api/addressApi";
 import profileSlice from "./slice/profile.slice";
+import discussionSlice from "./slice/discussion.slice";
 
 const store = configureStore({
   reducer: {
     product: productSlice,
     auth: authSlice,
     profile: profileSlice,
+    discussion: discussionSlice,
     [authApi.reducerPath]: authApi.reducer,
     [profileApi.reducerPath]: profileApi.reducer,
     [addressApi.reducerPath]: addressApi.reducer,

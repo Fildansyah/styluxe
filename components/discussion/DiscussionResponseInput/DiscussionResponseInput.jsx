@@ -1,8 +1,14 @@
 import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
 import React from "react";
 import { COLORS } from "../../../constants";
+import { useSelector } from "react-redux";
+import { biodataState } from "../../../hook/slice/auth.slice";
 
-const DiscussionResponseInput = () => {
+const DiscussionResponseInput = ({
+  data
+}) => {
+  const biodata = useSelector(biodataState)
+
   return (
     <View style={{ paddingVertical: 20 }}>
       <View style={{ flexDirection: "row", gap: 13, alignItems: "center" }}>
@@ -16,7 +22,7 @@ const DiscussionResponseInput = () => {
           }}
         >
           <Text style={{ fontFamily: "semibold", color: COLORS.white }}>
-            18
+            {data.comments.length}
           </Text>
         </View>
       </View>
@@ -25,6 +31,8 @@ const DiscussionResponseInput = () => {
           backgroundColor: COLORS.lightWhite,
           marginTop: 20,
           borderRadius: 10,
+          borderWidth: 1,
+          borderColor: COLORS.gray2,
         }}
       >
         <View
@@ -63,17 +71,17 @@ const DiscussionResponseInput = () => {
           <TouchableOpacity
             style={{
               paddingVertical: 5,
+              paddingHorizontal: 10,
               backgroundColor: COLORS.primary,
               alignItems: "center",
               borderRadius: 5,
-              width: "20%",
               alignSelf: "flex-end",
               marginHorizontal: 12,
               marginVertical: 10,
             }}
           >
             <Text style={{ fontFamily: "semibold", color: COLORS.white }}>
-              Post
+              Comment
             </Text>
           </TouchableOpacity>
         </View>

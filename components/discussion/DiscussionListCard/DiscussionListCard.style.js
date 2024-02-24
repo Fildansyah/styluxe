@@ -45,7 +45,8 @@ const styles = StyleSheet.create({
       fontSize: 12,
     },
     tagContainer: {
-      backgroundColor: COLORS.primary,
+      borderColor: COLORS.primary,
+      borderWidth: 2,
       height: "100%",
       paddingHorizontal: 20,
       borderRadius: 5,
@@ -59,7 +60,7 @@ const styles = StyleSheet.create({
     tagText: {
       fontFamily: "semibold",
       fontSize: 12,
-      color: COLORS.white,
+      color: COLORS.black,
     },
     content: {
       paddingTop: 20,

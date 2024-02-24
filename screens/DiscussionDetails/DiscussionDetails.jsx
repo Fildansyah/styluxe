@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import {
   FlatList,
   Image,
@@ -15,14 +15,15 @@ import {
   DiscussionResponseInput,
 } from "../../components";
 import styles from "./DiscussionDetails.style";
+import { useSelector } from "react-redux";
+import { selectedDiscussionState } from "../../hook/slice/discussion.slice";
+import moment from "moment";
 
 const DiscussionDetails = () => {
   const navigation = useNavigation();
-  const [images, setImages] = useState([
-    { id: 1, source: require("../../images/space.jpg"), preview: false },
-    { id: 2, source: require("../../images/space.jpg"), preview: false },
-    { id: 3, source: require("../../images/space.jpg"), preview: false },
-  ]);
+  const selectedDiscussion = useSelector(selectedDiscussionState);
+
+  console.log("selected", selectedDiscussion);
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -74,14 +75,28 @@ const DiscussionDetails = () => {
                           alignItems: "center",
                         }}
                       >
-                        <Text style={styles.name}>john Doe</Text>
-                        <Text style={styles.mail}>john@mail.com</Text>
+                        <Text style={styles.name}>
+                          {selectedDiscussion.author.first_name}
+                        </Text>
+                        <Text style={styles.mail}>
+                          {selectedDiscussion.author.email}
+                        </Text>
                       </View>
-                      <Text style={styles.time}>20/12/2022 • 16:00PM</Text>
+                      <Text style={styles.time}>
+                        {moment(selectedDiscussion.created_at).format(
+                          "DD/MM/YYYY"
+                        )}{" "}
+                        •{" "}
+                        {moment(selectedDiscussion.created_at).format(
+                          "HH:mm a"
+                        )}
+                      </Text>
                     </View>
                     <View style={styles.tagContainer}>
                       <View style={styles.tag}>
-                        <Text style={styles.tagText}>Outfit</Text>
+                        <Text style={styles.tagText}>
+                          {selectedDiscussion.category}
+                        </Text>
                       </View>
                     </View>
                   </View>
@@ -91,34 +106,29 @@ const DiscussionDetails = () => {
                   ellipsizeMode="tail"
                   style={styles.title}
                 >
-                  Ide Outfit belanja makanan kucing Jantan
+                  {selectedDiscussion.title}
                 </Text>
                 <View style={styles.content}>
                   <Text style={styles.contentText}>
-                    Ketika berbelanja makanan kucing, keselesaan dan
-                    fungsionalitas harus menjadi prioritas utama. Ini berarti
-                    memilih pakaian yang memungkinkan gerakan bebas dan nyaman
-                    saat berjalan di sekitar toko hewan peliharaan. Pakaian yang
-                    terlalu ketat atau terlalu longgar dapat mengganggu dan
-                    mengurangi kenyamanan kita saat berbelanja.
+                    {selectedDiscussion.content}
                   </Text>
-                  {images.length === 1 ? (
+                  {selectedDiscussion.images.length === 1 ? (
                     <TouchableOpacity style={{ flex: 1, maxHeight: 200 }}>
                       <Image
-                        source={require("../../images/space.jpg")}
+                        source={{ uri: selectedDiscussion.images[0] }}
                         style={{ width: "100%", height: "100%" }}
                       />
                     </TouchableOpacity>
                   ) : (
                     <FlatList
-                      data={images}
+                      data={selectedDiscussion.images}
                       numColumns={2}
                       renderItem={({ item }) => (
                         <TouchableOpacity
                           style={{ flex: 1, maxHeight: 200, padding: 2 }}
                         >
                           <Image
-                            source={require("../../images/space.jpg")}
+                            source={{ uri: item }}
                             style={{ width: "100%", height: "100%" }}
                           />
                         </TouchableOpacity>
@@ -144,19 +154,21 @@ const DiscussionDetails = () => {
                         size={24}
                         color={COLORS.primary}
                       />
-                      <Text style={styles.likes}>10</Text>
+                      <Text style={styles.likes}>
+                        {selectedDiscussion.reactions.length}
+                      </Text>
                     </View>
                   </TouchableOpacity>
                 </View>
               </View>
-              <DiscussionResponseInput />
-              <View
-                style={{ flexDirection: "column", gap: 5, paddingBottom: 10 }}
-              >
-                <DiscussionCommentCard />
-                <DiscussionCommentCard />
-                <DiscussionCommentCard />
-              </View>
+              <DiscussionResponseInput data={selectedDiscussion} />
+              <FlatList
+                data={selectedDiscussion.comments}
+                keyExtractor={(item, index) => index.toString()}
+                renderItem={({ item, index }) => (
+                  <DiscussionCommentCard data={item} />
+                )}
+              />
             </View>
           </>
         )}

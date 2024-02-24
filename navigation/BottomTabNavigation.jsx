@@ -1,9 +1,10 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Discussion, Home, Profile, Stylist } from "../screens";
+import { Collection,  Home, Profile, Stylist } from "../screens";
 import { Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../constants/index";
 import DrawerNavigationDiscussion from "./DrawerNavigationDiscussion";
+import { Text } from "react-native";
 
 const Tab = createBottomTabNavigator();
 
@@ -28,6 +29,19 @@ const BottomTabNavigation = () => {
               />
             );
           },
+          tabBarLabel: ({ focused }) => {
+            return (
+              <Text
+                style={{
+                  fontFamily: "bold",
+                  color: focused ? COLORS.primary : COLORS.gray2,
+                  fontSize: 12,
+                }}
+              >
+                Home
+              </Text>
+            );
+          },
         }}
       />
       <Tab.Screen
@@ -41,6 +55,47 @@ const BottomTabNavigation = () => {
                 size={20}
                 color={focused ? COLORS.primary : COLORS.gray2}
               />
+            );
+          },
+          tabBarLabel: ({ focused }) => {
+            return (
+              <Text
+                style={{
+                  fontFamily: "bold",
+                  color: focused ? COLORS.primary : COLORS.gray2,
+                  fontSize: 12,
+                }}
+              >
+                Discussion
+              </Text>
+            );
+          },
+        }}
+      />
+      <Tab.Screen
+        name="Collection"
+        component={Collection}
+        options={{
+          tabBarIcon: ({ focused }) => {
+            return (
+              <Ionicons
+                name={focused ? "cart" : "cart-outline"}
+                size={20}
+                color={focused ? COLORS.primary : COLORS.gray2}
+              />
+            );
+          },
+          tabBarLabel: ({ focused }) => {
+            return (
+              <Text
+                style={{
+                  fontFamily: "bold",
+                  color: focused ? COLORS.primary : COLORS.gray2,
+                  fontSize: 12,
+                }}
+              >
+                Collection
+              </Text>
             );
           },
         }}
@@ -58,6 +113,19 @@ const BottomTabNavigation = () => {
               />
             );
           },
+          tabBarLabel: ({ focused }) => {
+            return (
+              <Text
+                style={{
+                  fontFamily: "bold",
+                  color: focused ? COLORS.primary : COLORS.gray2,
+                  fontSize: 12,
+                }}
+              >
+                Stylist
+              </Text>
+            );
+          },
         }}
       />
       <Tab.Screen
@@ -71,6 +139,19 @@ const BottomTabNavigation = () => {
                 size={20}
                 color={focused ? COLORS.primary : COLORS.gray2}
               />
+            );
+          },
+          tabBarLabel: ({ focused }) => {
+            return (
+              <Text
+                style={{
+                  fontFamily: "bold",
+                  color: focused ? COLORS.primary : COLORS.gray2,
+                  fontSize: 12,
+                }}
+              >
+                Profile
+              </Text>
             );
           },
         }}

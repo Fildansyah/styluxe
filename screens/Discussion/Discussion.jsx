@@ -12,6 +12,7 @@ import { PanGestureHandler } from "react-native-gesture-handler";
 import { DiscussionHeader, DiscussionListCard } from "../../components";
 import { Feather, Ionicons } from "@expo/vector-icons";
 import { COLORS } from "../../constants";
+import { discussionExplore } from "../../mocks/Dummydiscussion";
 
 const Discussion = () => {
   const navigation = useNavigation();
@@ -71,8 +72,10 @@ const Discussion = () => {
 
       <FlatList
         ref={scrollViewRef}
-        data={discussionRepeater}
-        renderItem={({ item, index }) => <DiscussionListCard key={index} />}
+        data={discussionExplore}
+        renderItem={({ item, index }) => (
+          <DiscussionListCard key={index} postData={item} />
+        )}
         keyExtractor={(item, index) => index.toString()}
         style={{ paddingHorizontal: 10 }}
         onScroll={(event) => handleScroll(event)}
